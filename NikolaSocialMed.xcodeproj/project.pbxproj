@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		3C35DE0B1F18FB2100CAB917 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C35DE0A1F18FB2100CAB917 /* AppDelegate.swift */; };
-		3C35DE0D1F18FB2100CAB917 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C35DE0C1F18FB2100CAB917 /* ViewController.swift */; };
+		3C35DE0D1F18FB2100CAB917 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C35DE0C1F18FB2100CAB917 /* SignInVC.swift */; };
 		3C35DE101F18FB2100CAB917 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C35DE0E1F18FB2100CAB917 /* Main.storyboard */; };
 		3C35DE121F18FB2100CAB917 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C35DE111F18FB2100CAB917 /* Assets.xcassets */; };
 		3C35DE151F18FB2100CAB917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C35DE131F18FB2100CAB917 /* LaunchScreen.storyboard */; };
+		3C35DE1D1F18FBD700CAB917 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C35DE1C1F18FBD700CAB917 /* GoogleService-Info.plist */; };
+		C0CE54E713FEE38B3EF551D0 /* Pods_NikolaSocialMed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783DF0C51D1821C5F8F875CF /* Pods_NikolaSocialMed.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1EF3668B0DEB5DD4CD10D7AD /* Pods-NikolaSocialMed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NikolaSocialMed.release.xcconfig"; path = "Pods/Target Support Files/Pods-NikolaSocialMed/Pods-NikolaSocialMed.release.xcconfig"; sourceTree = "<group>"; };
 		3C35DE071F18FB2100CAB917 /* NikolaSocialMed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NikolaSocialMed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C35DE0A1F18FB2100CAB917 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3C35DE0C1F18FB2100CAB917 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3C35DE0C1F18FB2100CAB917 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		3C35DE0F1F18FB2100CAB917 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C35DE111F18FB2100CAB917 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C35DE141F18FB2100CAB917 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C35DE161F18FB2100CAB917 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C35DE1C1F18FBD700CAB917 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		783DF0C51D1821C5F8F875CF /* Pods_NikolaSocialMed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NikolaSocialMed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C74A3C702CE53A377B2DAEE /* Pods-NikolaSocialMed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NikolaSocialMed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NikolaSocialMed/Pods-NikolaSocialMed.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0CE54E713FEE38B3EF551D0 /* Pods_NikolaSocialMed.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		075A09EFB83B893A346FFBCF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				783DF0C51D1821C5F8F875CF /* Pods_NikolaSocialMed.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3C35DDFE1F18FB2100CAB917 = {
 			isa = PBXGroup;
 			children = (
 				3C35DE091F18FB2100CAB917 /* NikolaSocialMed */,
 				3C35DE081F18FB2100CAB917 /* Products */,
+				9EA34B8F7AEE0CBF791422FB /* Pods */,
+				075A09EFB83B893A346FFBCF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +71,48 @@
 		3C35DE091F18FB2100CAB917 /* NikolaSocialMed */ = {
 			isa = PBXGroup;
 			children = (
+				3C35DE201F18FEBA00CAB917 /* Model */,
+				3C35DE1F1F18FEB500CAB917 /* View */,
+				3C35DE1E1F18FEAE00CAB917 /* Controller */,
 				3C35DE0A1F18FB2100CAB917 /* AppDelegate.swift */,
-				3C35DE0C1F18FB2100CAB917 /* ViewController.swift */,
 				3C35DE0E1F18FB2100CAB917 /* Main.storyboard */,
 				3C35DE111F18FB2100CAB917 /* Assets.xcassets */,
 				3C35DE131F18FB2100CAB917 /* LaunchScreen.storyboard */,
 				3C35DE161F18FB2100CAB917 /* Info.plist */,
+				3C35DE1C1F18FBD700CAB917 /* GoogleService-Info.plist */,
 			);
 			path = NikolaSocialMed;
+			sourceTree = "<group>";
+		};
+		3C35DE1E1F18FEAE00CAB917 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3C35DE0C1F18FB2100CAB917 /* SignInVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3C35DE1F1F18FEB500CAB917 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3C35DE201F18FEBA00CAB917 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9EA34B8F7AEE0CBF791422FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C74A3C702CE53A377B2DAEE /* Pods-NikolaSocialMed.debug.xcconfig */,
+				1EF3668B0DEB5DD4CD10D7AD /* Pods-NikolaSocialMed.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C35DE191F18FB2100CAB917 /* Build configuration list for PBXNativeTarget "NikolaSocialMed" */;
 			buildPhases = (
+				8EC4D6D8A3FC2209331A6547 /* [CP] Check Pods Manifest.lock */,
 				3C35DE031F18FB2100CAB917 /* Sources */,
 				3C35DE041F18FB2100CAB917 /* Frameworks */,
 				3C35DE051F18FB2100CAB917 /* Resources */,
+				43381DA48E96C85A4319DB28 /* [CP] Embed Pods Frameworks */,
+				520187EA454FE7A6AEF26C9D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C35DE151F18FB2100CAB917 /* LaunchScreen.storyboard in Resources */,
+				3C35DE1D1F18FBD700CAB917 /* GoogleService-Info.plist in Resources */,
 				3C35DE121F18FB2100CAB917 /* Assets.xcassets in Resources */,
 				3C35DE101F18FB2100CAB917 /* Main.storyboard in Resources */,
 			);
@@ -132,12 +187,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		43381DA48E96C85A4319DB28 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NikolaSocialMed/Pods-NikolaSocialMed-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		520187EA454FE7A6AEF26C9D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NikolaSocialMed/Pods-NikolaSocialMed-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EC4D6D8A3FC2209331A6547 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3C35DE031F18FB2100CAB917 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C35DE0D1F18FB2100CAB917 /* ViewController.swift in Sources */,
+				3C35DE0D1F18FB2100CAB917 /* SignInVC.swift in Sources */,
 				3C35DE0B1F18FB2100CAB917 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +362,7 @@
 		};
 		3C35DE1A1F18FB2100CAB917 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C74A3C702CE53A377B2DAEE /* Pods-NikolaSocialMed.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G2F2KTJ6J7;
@@ -272,6 +376,7 @@
 		};
 		3C35DE1B1F18FB2100CAB917 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EF3668B0DEB5DD4CD10D7AD /* Pods-NikolaSocialMed.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = G2F2KTJ6J7;
@@ -302,6 +407,7 @@
 				3C35DE1B1F18FB2100CAB917 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
