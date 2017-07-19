@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C27FA401F1E0060003EA100 /* CirlceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C27FA3F1F1E0060003EA100 /* CirlceView.swift */; };
+		3C27FA441F1E17C6003EA100 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C27FA431F1E17C6003EA100 /* FeedCell.swift */; };
+		3C27FA471F1E4C89003EA100 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C27FA461F1E4C89003EA100 /* DataService.swift */; };
 		3C35DE0B1F18FB2100CAB917 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C35DE0A1F18FB2100CAB917 /* AppDelegate.swift */; };
 		3C35DE0D1F18FB2100CAB917 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C35DE0C1F18FB2100CAB917 /* SignInVC.swift */; };
 		3C35DE101F18FB2100CAB917 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C35DE0E1F18FB2100CAB917 /* Main.storyboard */; };
@@ -18,11 +21,15 @@
 		3C3EBA661F1CA8FF005131EC /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3EBA651F1CA8FF005131EC /* RoundButton.swift */; };
 		3C3EBA681F1CAAB5005131EC /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3EBA671F1CAAB5005131EC /* FancyField.swift */; };
 		3C3EBA6A1F1CABEB005131EC /* FancyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3EBA691F1CABEB005131EC /* FancyBtn.swift */; };
+		3C3EBA6F1F1CF83E005131EC /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3EBA6E1F1CF83E005131EC /* FeedVC.swift */; };
 		C0CE54E713FEE38B3EF551D0 /* Pods_NikolaSocialMed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783DF0C51D1821C5F8F875CF /* Pods_NikolaSocialMed.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1EF3668B0DEB5DD4CD10D7AD /* Pods-NikolaSocialMed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NikolaSocialMed.release.xcconfig"; path = "Pods/Target Support Files/Pods-NikolaSocialMed/Pods-NikolaSocialMed.release.xcconfig"; sourceTree = "<group>"; };
+		3C27FA3F1F1E0060003EA100 /* CirlceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirlceView.swift; sourceTree = "<group>"; };
+		3C27FA431F1E17C6003EA100 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		3C27FA461F1E4C89003EA100 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		3C35DE071F18FB2100CAB917 /* NikolaSocialMed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NikolaSocialMed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C35DE0A1F18FB2100CAB917 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C35DE0C1F18FB2100CAB917 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -37,6 +44,7 @@
 		3C3EBA671F1CAAB5005131EC /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
 		3C3EBA691F1CABEB005131EC /* FancyBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyBtn.swift; sourceTree = "<group>"; };
 		3C3EBA6B1F1CDD35005131EC /* NikolaSocialMed.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NikolaSocialMed.entitlements; sourceTree = "<group>"; };
+		3C3EBA6E1F1CF83E005131EC /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		783DF0C51D1821C5F8F875CF /* Pods_NikolaSocialMed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NikolaSocialMed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C74A3C702CE53A377B2DAEE /* Pods-NikolaSocialMed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NikolaSocialMed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NikolaSocialMed/Pods-NikolaSocialMed.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +69,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3C27FA451F1E4C72003EA100 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3C27FA461F1E4C89003EA100 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		3C35DDFE1F18FB2100CAB917 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +98,7 @@
 		3C35DE091F18FB2100CAB917 /* NikolaSocialMed */ = {
 			isa = PBXGroup;
 			children = (
+				3C27FA451F1E4C72003EA100 /* Services */,
 				3C3EBA6B1F1CDD35005131EC /* NikolaSocialMed.entitlements */,
 				3C3EBA621F1CA6CD005131EC /* Util */,
 				3C35DE201F18FEBA00CAB917 /* Model */,
@@ -101,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				3C35DE0C1F18FB2100CAB917 /* SignInVC.swift */,
+				3C3EBA6E1F1CF83E005131EC /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -112,6 +130,8 @@
 				3C3EBA651F1CA8FF005131EC /* RoundButton.swift */,
 				3C3EBA671F1CAAB5005131EC /* FancyField.swift */,
 				3C3EBA691F1CABEB005131EC /* FancyBtn.swift */,
+				3C27FA3F1F1E0060003EA100 /* CirlceView.swift */,
+				3C27FA431F1E17C6003EA100 /* FeedCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -273,7 +293,11 @@
 				3C3EBA681F1CAAB5005131EC /* FancyField.swift in Sources */,
 				3C35DE0D1F18FB2100CAB917 /* SignInVC.swift in Sources */,
 				3C3EBA661F1CA8FF005131EC /* RoundButton.swift in Sources */,
+				3C27FA401F1E0060003EA100 /* CirlceView.swift in Sources */,
+				3C27FA441F1E17C6003EA100 /* FeedCell.swift in Sources */,
+				3C27FA471F1E4C89003EA100 /* DataService.swift in Sources */,
 				3C35DE0B1F18FB2100CAB917 /* AppDelegate.swift in Sources */,
+				3C3EBA6F1F1CF83E005131EC /* FeedVC.swift in Sources */,
 				3C3EBA611F1CA648005131EC /* FancyView.swift in Sources */,
 				3C3EBA641F1CA6DB005131EC /* Constants.swift in Sources */,
 				3C3EBA6A1F1CABEB005131EC /* FancyBtn.swift in Sources */,
