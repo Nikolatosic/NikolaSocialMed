@@ -190,12 +190,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vl9-g5-q5P" customClass="FancyView" customModule="NikolaSocialMed" customModuleProvider="target">
                                 <rect key="frame" x="16" y="73" width="288" height="65"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="ENm-rZ-E2P" customClass="CirlceView" customModule="NikolaSocialMed" customModuleProvider="target">
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="ENm-rZ-E2P" customClass="CirlceView" customModule="NikolaSocialMed" customModuleProvider="target">
                                         <rect key="frame" x="8" y="8" width="49" height="49"/>
                                         <color key="backgroundColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="49" id="O5H-cZ-NfJ"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="v2A-Il-oJl" appends="YES" id="4MM-E6-7iI"/>
+                                        </connections>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add a caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kzW-jL-WSL" customClass="FancyField" customModule="NikolaSocialMed" customModuleProvider="target">
                                         <rect key="frame" x="65" y="8" width="158" height="49"/>
@@ -348,10 +352,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addImage" destination="ENm-rZ-E2P" id="bXl-da-sEJ"/>
                         <outlet property="tableView" destination="3aM-Jj-2sN" id="fom-Mn-GgR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNF-5J-TwL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="v2A-Il-oJl">
+                    <connections>
+                        <action selector="addImageTapped:" destination="6Sh-0y-vYu" id="Hyc-zo-7fA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="855" y="32.74647887323944"/>
         </scene>

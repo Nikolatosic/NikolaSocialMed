@@ -10,17 +10,24 @@ import UIKit
 import Firebase
 import SwiftKeychainWrapper
 
-class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+// UIImagePickerControllerDelegate, UINavigationControllerDelegate for image picker
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addImage: CirlceView!
     
     var posts = [Post]()
+    var imagePicker: UIImagePickerController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
         
         // Getting Objects from firebase Database (snapshot.value print JSON objects)
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
@@ -65,6 +72,16 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    // MARK: - UIImagePicker
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            addImage.image = image
+        } else {
+            print("NIKK: A valid image wasn't selected")
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
     
     
     // MARK: - Actions
@@ -78,6 +95,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         try! Auth.auth().signOut()
         print("NIKK: Keychain removed successfully")
     }
+    
+    @IBAction func addImageTapped(_ sender: Any) {
+        print("Tapped")
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+
     
     override var prefersStatusBarHidden: Bool {
         return true
