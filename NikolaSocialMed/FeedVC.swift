@@ -24,6 +24,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         // Getting Objects from firebase Database (snapshot.value print JSON objects)
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
+            
+            self.posts = [] // <- if we make some changes on Firebase this will prevent to duplicate a objects
+            
             if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
                 for snap in snapshots {
                     print("SNAP: \(snap)")
@@ -34,8 +37,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                         
                     }
                 }
-                print(self.posts.count, "POSTS")
             }
+            print(self.posts.count, "POSTS")
             self.tableView.reloadData()
         })
     }
@@ -51,7 +54,15 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: "FeedCell") as! FeedCell
+        
+        let post = posts[indexPath.row]
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell") as? FeedCell {
+            cell.configureCell(post: post)
+            return cell
+        } else {
+            return FeedCell()
+        }
     }
     
     
