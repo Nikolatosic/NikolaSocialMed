@@ -14,15 +14,29 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var posts = [Post]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
         
-        // Objects from firebase Database (snapshot.value print JSON objects)
+        // Getting Objects from firebase Database (snapshot.value print JSON objects)
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
-            print(snapshot.value!)
+            if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
+                for snap in snapshots {
+                    print("SNAP: \(snap)")
+                    if let postDict = snap.value as? Dictionary<String, Any> {
+                        let key = snap.key
+                        let post = Post(postKey: key, postData: postDict)
+                        self.posts.append(post)
+                        
+                    }
+                }
+                print(self.posts.count, "POSTS")
+            }
+            self.tableView.reloadData()
         })
     }
     
@@ -33,7 +47,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
